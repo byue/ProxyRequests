@@ -1,0 +1,24 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "proxy_requests"
+version = "0.1.0"
+description = "Lightweight rotating proxy GET client built on curl-cffi."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Bryan Yue" }]
+dependencies = [
+  "curl-cffi>=0.14,<1",
+  "lxml>=6.0.2,<7",
+  "pandas>=3.0.1,<4",
+]
+keywords = ["proxy", "requests", "curl-cffi"]
+
+[project.urls]
+Homepage = "https://github.com/yourname/ProxyRequests"
+
+[tool.hatch.build.targets.wheel]
+include = ["proxy_requests.py"]
